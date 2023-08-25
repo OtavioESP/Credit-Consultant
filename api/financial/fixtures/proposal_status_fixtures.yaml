@@ -1,0 +1,15 @@
+- model: financial.ProposalStatus
+  pk: 1
+  fields:
+    name: Negada
+    description: Proposta negada
+- model: financial.ProposalStatus
+  pk: 2
+  fields:
+    name: Aprovacao Humana
+    description: Proposta aguardando aprovação humana
+- model: financial.ProposalStatus
+  pk: 3
+  fields:
+    name: Aprovada
+    description: Proposta aprovada
