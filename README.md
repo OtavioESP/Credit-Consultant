@@ -1,35 +1,58 @@
 # Django-Consultant-Otavio
+# v1.0
 
-Este projeto é destinado a um teste de vaga.
+SOBRE O PROJETO
+Este projeto é destinado a um teste de vaga. Na qual um usuário administra quais serão os dados a serem enviados para uma api externa de checagam de viabilidade de crédiot financeiro, 
+Após isso o próprio sistema cuida de enviar estes dados para checagem, e ao avaliar a resposta da API, ele segue criando o pedido financeiro a partir da checagem prévia.
 
-Técnologias:
+Neste arquivo irei explicar o projeto, dependências e como inicializa-lo
 
-Python 3.8.x
-Django 3.0.6
-Django REST framework
-React
-Docker
+### 🛠 Tecnologias utilziadas
+------------
 
-Banco de dados 
+- [DJANGO](https://www.djangoproject.com/)
+- [PYTHON](https://www.python.org/)
+- [REACT](https://react.dev/)
 
-Para iniciar o projeto primeiro instale as dependencias.
-Da raiz:
-$ cd api
-caso esteja usando virtualenvwrapper
-$ workon env_teste
-$ pip install -r requirements.txt
-$ python manage.py migrate
-$ python manage.py createsuperuser
-$ python manage.py runserver
+### 🎲 Instalação e configuração
+------------
 
-No fron-end:
-Da raiz:
-$ cd ui
-$ npm install 
-$ npm start
+Para este projeto voce necessita das seguintes:
+* `python` 3.7 a 3.8.x
 
-Caso o gerenciador de pacotes for o YARN:
-$ cd ui
-$ yarn install
-$ yarn start
+
+# para utilizar a API
+
+```bash
+
+    $ cd template/api
+# Caso você não tenha o pyenv, utilize o seguinte comando:
+    $ python3 -m venv ./venv
+# após a criação inicialize com:
+    $ source venv/bin/activate
+# caso possua pyenv, prossiga com:
+    $ mkvirtualenv env
+# caso não houverem erros o hambiente virtual ja estará inicializado, caso não:
+    $ workon env
+# Instalando as dependências:
+    $ pip install -r requirements.txt
+# Inicializar o banco de dados:
+    $ python manage.py migrate
+# Rodando os dados pré cadastrados:
+    $ python manage.py loaddata */fixtures/*.yaml
+
+# Enfim inicializando o projeto:
+    $ python manage.py runserver
+```
+# para utilizar a interface:
+
+```bash
+    $ cd ui
+# agora em diante voce pode substituir o npm por yarn em qualquer um dos comandos abaixo:
+#instalando as dependências:
+    $ npm install
+# rodando o projeto
+    $ npm run
+
+```
 
