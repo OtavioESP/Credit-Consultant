@@ -25,11 +25,9 @@ SECRET_KEY = '7p8eosx#zs4*5ufq)(gf@2w*p^=fh&2c4#yr%sz!s#qokca@l4_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_WHITELIST = os.getenv(
-    'CORS_ORIGIN_WHITELIST', 'http://localhost:3000').split(',')
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -40,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'financial.apps.FinancialConfig',
     'login.apps.LoginConfig',
+    'person.apps.PersonConfig',
 ]
 
 AUTH_USER_MODEL = 'login.User'
@@ -55,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'api.urls'

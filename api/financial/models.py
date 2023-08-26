@@ -16,6 +16,11 @@ class ProposalStatus(models.Model):
 
 
 class ProposalFields(LoggedModel):
+    INPUT_TYPES = [
+        ('text', 'Text'),
+        ('number', 'Number'),
+    ]
+
     name = models.CharField(max_length=100, verbose_name='nome')
     description = models.CharField(
         max_length=200, null=True, blank=True, verbose_name='descricao')
@@ -23,6 +28,8 @@ class ProposalFields(LoggedModel):
         default=False, verbose_name='obrigatorio', help_text='Marque para deixar o campo obrigatório')
     enabled = models.BooleanField(default=False, verbose_name='habilitado',
                                   help_text='marque para manter que o campo apareça no formulario de envio')
+    type = models.CharField(
+        max_length=50, choices=INPUT_TYPES, null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'

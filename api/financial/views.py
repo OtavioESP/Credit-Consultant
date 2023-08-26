@@ -1,4 +1,7 @@
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from utils.proposal_valuation_service import ProposalValuation
 
 from financial.serializers import (
     ProposalStatusSerializer, ProposalFieldsSerializer, FinancialProposalSerializer, FinancialProposalForm)
@@ -22,3 +25,12 @@ class FinancialProposalView(viewsets.ModelViewSet):
         if self.action in ['create', 'update']:
             return FinancialProposalForm
         return FinancialProposalSerializer
+
+    @action(detail=False, methods=['POST'])
+    def make_proposal(self, request):
+        data = request.data
+        proposal_response = bool
+        proposal_response = ProposalValuation().check_proposal(data)
+        # if proposal_response:
+
+        return Response(proposal_response, status=200)
