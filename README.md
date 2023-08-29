@@ -1,7 +1,9 @@
 # Django-Consultant-Otavio
 # v1.0
 
-SOBRE O PROJETO
+SOBRE O PROJETO:
+
+
 Este projeto é destinado a um teste de vaga. Na qual um usuário administra quais serão os dados a serem enviados para uma api externa de checagam de viabilidade de crédito financeiro, 
 Após isso o próprio sistema cuida de enviar estes dados para checagem, e ao avaliar a resposta da API, ele segue criando o pedido financeiro a partir da checagem prévia.
 
@@ -42,6 +44,8 @@ Para este projeto voce necessita das seguintes:
     $ python manage.py migrate
 # Rodando os dados pré cadastrados:
     $ python manage.py loaddata */fixtures/*.yaml
+# Criando o seu usario
+    $ python manage.py createsuperuser
 ```
 
 # 2 - Criando o docker container para o redis ( broker do celery )
@@ -94,4 +98,7 @@ Para este projeto voce necessita das seguintes:
     $ npm run
 
 ```
-
+# O projeto está pronto para rodar.
+# Para acessar as rotas:
+- [FRONT-END](http://localhost:3000)
+- [BACK-END](http://localhost:8000)
