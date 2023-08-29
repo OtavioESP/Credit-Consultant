@@ -1,4 +1,5 @@
 from django.db import models
+from person.models import Person
 
 from utils.versioned_models import LoggedModel
 
@@ -42,6 +43,9 @@ class ProposalFields(LoggedModel):
 class FinancialProposal(LoggedModel):
     status = models.ForeignKey(
         ProposalStatus, on_delete=models.PROTECT, null=True, blank=True)
+    person = models.ForeignKey(
+        Person, on_delete=models.PROTECT, null=True, blank=True)
+    proposal_data = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = 'Proposta financeira'

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function StyledButton({ onConfirm, children }) {
+const Button = ({ onConfirm, children }) => {
   const buttonStyles = {
     width: '150px',
     height: '40px',
@@ -17,4 +17,4 @@ function StyledButton({ onConfirm, children }) {
   );
 }
 
-export default StyledButton;
+export default Button;

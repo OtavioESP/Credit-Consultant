@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'financial.apps.FinancialConfig',
     'login.apps.LoginConfig',
     'person.apps.PersonConfig',
+    'celery',
 ]
+
+CELERY_BROKER_URL = "redis://127.0.0.1:6379"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379"
 
 AUTH_USER_MODEL = 'login.User'
 

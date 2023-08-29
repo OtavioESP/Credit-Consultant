@@ -15,4 +15,4 @@ class ProposalFieldsAdmin(admin.ModelAdmin):
 
 @admin.register(FinancialProposal)
 class FinancialProposalAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['id', 'status', 'person', 'proposal_data']

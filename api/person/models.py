@@ -17,4 +17,4 @@ class Person(LoggedModel):
         verbose_name_plural = 'Pessoas Fisicas'
 
     def __str__(self):
-        return f'{self.cpf}'
+        return f'{self.cpf[:3]}.***.***-** | {self.full_name}'

@@ -1,26 +1,33 @@
 import React from 'react';
 
-function StyledInput({ name, onChange }) {
+const Input = ({ name, type, onChange, enabled }) => {
   const inputStyles = {
     width: '300px',
     height: '40px',
-    borderTop: 'none', // No border on top
-    borderLeft: 'none', // No border on left
-    borderRight: 'none', // No border on right
-    borderBottom: '1px solid gray', // Border only at the bottom
+    borderTop: 'none',
+    borderLeft: 'none',
+    borderRight: 'none',
+    borderBottom: '1px solid gray',
     paddingLeft: '10px',
-    outline: 'none', // Remove default focus outline
+    outline: 'none',
   };
 
 
   return (
-    <input
-      type="text"
-      placeholder={name}
-      style={inputStyles}
-      onChange={(e) => onChange(name, e.target.value)}
-    />
-  );
+    <>
+      {enabled ?
+        <input
+          placeholder={name}
+          style={inputStyles}
+          type={type}
+          onChange={(e) => onChange(name, e.target.value)
+          }
+        />
+        :
+        ''
+      }
+    </>
+  )
 }
 
-export default StyledInput;
+export default Input;

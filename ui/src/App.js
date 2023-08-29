@@ -1,16 +1,22 @@
 import './App.css';
-import Container from './components/Container';
+import CreateProposalPage from './pages/CreateProposalPage';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import ListProposalPage from './pages/ListProposalPage';
+import Header from './components/Header';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Ola </h1>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
-          <Container />
-        </div>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route index element={<CreateProposalPage />} />
+        <Route path="listar" element={<ListProposalPage />} />
+      </Routes>
+      <ToastContainer />
+    </BrowserRouter>
   );
 }
 
