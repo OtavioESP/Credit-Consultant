@@ -1,4 +1,5 @@
 import React from "react";
+import { API_HOST } from "../consts";
 
 const Header = () => {
   const headerStyles = {
@@ -24,6 +25,9 @@ const Header = () => {
       </a>
       <a href="/" style={linkStyles}>
         Nova proposta
+      </a>
+      <a href={`${API_HOST}/admin`} style={linkStyles}>
+        Admin
       </a>
     </div>
   );

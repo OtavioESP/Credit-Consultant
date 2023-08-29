@@ -7,6 +7,7 @@ const ListProposalPage = () => {
 
   const divStyles = {
     backgroundColor: '#282c34',
+    minHeight: '100vh',
     height: 'fit-content',
     flexDirection: 'column',
     display: 'flex',

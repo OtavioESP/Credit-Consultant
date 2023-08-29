@@ -25,7 +25,7 @@ const SelectInput = ({ name, options, onChange }) => {
       value={selectedOption}
       onChange={handleOptionChange}
     >
-      <option value="">Selecione uma opção</option>
+      <option value="">Pessoas</option>
       {
         options.map((option) => (
           <option key={option.id} value={option.id}>
