@@ -35,9 +35,6 @@ Para este projeto voce necessita das seguintes:
     $ mkvirtualenv env
 # caso não houverem erros o hambiente virtual ja estará inicializado, caso não:
     $ workon env
-# Caso possua pyenv viertualenvwrapper utilize:
-    $ mkvirtualenv env
-    $ workon env
 # Agora siga: 
 # Instalando as dependências:
     $ pip install -r requirements.txt
