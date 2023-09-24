@@ -1,4 +1,4 @@
-# Django-Consultant-Otavio
+# Credit consultant
 # v1.0
 
 SOBRE O PROJETO:
