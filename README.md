@@ -4,7 +4,7 @@
 SOBRE O PROJETO:
 
 
-Este projeto é destinado a um teste de vaga. Na qual um usuário administra quais serão os dados a serem enviados para uma api externa de checagam de viabilidade de crédito financeiro, 
+Este projeto é um sistema na qual um usuário administra quais serão os dados a serem enviados para uma api externa de checagam de viabilidade de crédito financeiro, 
 Após isso o próprio sistema cuida de enviar estes dados para checagem, e ao avaliar a resposta da API, ele segue criando o pedido financeiro a partir da checagem prévia.
 
 Neste arquivo irei explicar o projeto, dependências e como inicializa-lo
